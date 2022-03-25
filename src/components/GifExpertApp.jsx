@@ -6,7 +6,7 @@ import { GifGrid } from './GifGrid';
 const GifExpertApp = () => {
 
   const vtubers = [
-    'Tokoyami Towa',
+    // 'Tokoyami Towa',
     // 'Sakura Miko',
     // 'Inugami Korone',
     // 'Nekomata Okayu',
@@ -23,15 +23,12 @@ const GifExpertApp = () => {
 
   return (
     <>
-      <h2>Gif Expert App</h2>
+      <h1 className='titleApp'>Gif Expert App</h1>
       <AddCategory setCategories={setCategories} />
       <hr />
-
-      <ol>
-        {
-          categories.map(category => <GifGrid category={category} key={category} />)
-        }
-      </ol>
+      {
+        categories.map(category => <GifGrid category={category} key={category} />)
+      }
     </>
   )
 };
