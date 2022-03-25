@@ -8,10 +8,10 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
+html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 /* Sections
@@ -22,12 +22,18 @@
  */
 
 body {
-  margin: 0;
+  background-color: #f2f2f2;
+  margin: 0.3em;
 }
 
 ul {
   list-style: none;
   margin: 0;
+}
+
+ol {
+  margin: 0;
+  padding: 0.5em;
 }
 
 /**
@@ -152,7 +158,11 @@ sup {
  */
 
 img {
+  display: block;
   border-style: none;
+  box-sizing: border-box;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* Forms
@@ -180,7 +190,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -190,7 +201,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
