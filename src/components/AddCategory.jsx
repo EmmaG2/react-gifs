@@ -9,19 +9,19 @@ export const AddCategory = ({ setCategories }) => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    if (inputValue.trim().length > 3) setCategories(cats => [...cats, inputValue]);
+    if (inputValue.trim().length > 3) setCategories(cats => [ inputValue, ...cats ]);
   }
 
   return (
     <form
-      className='container'
+      className='form'
       onSubmit={handleSubmit}>
       <div className="field">
         <input type="text"
           value={inputValue}
           onChange={handleInputChange}
         />
-        <div className="line"/>
+        <div className="line" />
       </div>
     </form>
   )
